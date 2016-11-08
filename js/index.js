@@ -14,8 +14,7 @@ function tellx (discr) {
   
  else {
   if (d < 0){
-  	var x1 = (-b + i√ - Δ) / (2 * a);
-  	var x2 = (-b - i√ - Δ) / (2 * a);
+  	return 'try again'
   }
   
   if (d > 0) {
