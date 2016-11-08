@@ -3,18 +3,25 @@ var a = Number(prompt (a = "enter value of a"));
 var b = Number(prompt (b = "enter value of b"));
 var c = Number(prompt (c = "enter value of c"));
 
-var discr = Math.pow(b * b) - 4 * (a * c);
+var discr = b * b - 4 * a * c;
+var result;
 
 function tellx (discr) {
- if (a == 0 && b == 0 && c == 0) {
-    return 'Something went wrong';
+ if (discr = 0) {
+    result = 'there is one root, x1 = x2 = -b / (2 * a)';
   }
   
- if (discr < 0){
-  	result = 'Your discriminant' + discriminant + 'is less than 0'
-        
+ else if (discr < 0){
+  	result = 'there are no real roots, there are 2 complex roots: x1 = (-b + i√ - Δ) / (2 * a) and x2 = (-b - i√ - Δ)/(2a)';
+ }
   
-  var age = Number(prompt('Tell x'));
-  var result = tellx(number);
+ else if (disc > 0) {
+     var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+     var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+     result = 'x1 = ' + x1 + ', x2 = ' + x2;
+ }
+ 
   document.write(result);
   
+}
